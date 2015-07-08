@@ -56,7 +56,7 @@ def html2text(data, method='lynx', utf8=False):
         return d
 
     if method == 'lynx':
-        cmd = ['lynx', '-dump', '-stdin']
+        cmd = ['lynx', '-dump', '-stdin', '-force-html', '-nolist' ]
 
         if utf8:
             cmd.append('-assume_charset=UTF-8')
